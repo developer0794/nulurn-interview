@@ -1,0 +1,29 @@
+<div class="cards-mul card">
+  <div class="car-details">
+    <ng-container class="card-n">
+      <span class="card-number"> {{ indexInc }}</span>
+    </ng-container>
+    <ng-container class="card-d">
+      <div class="">
+        <span class="chapter-heading"> {{ lectureData.heading }}</span>
+        <div class="timing">
+          <span class="timer">
+            <ng-container class="icon">
+              <img
+                class="m-r-8"
+                src="../../../assets/images-ui/online-video.svg"
+                width="16px"
+                alt=""
+              />
+            </ng-container>
+            <ng-container class="time"
+              >{{
+                lectureData.lecturesNumber
+              }}&nbsp;&nbsp;Lectures</ng-container
+            >
+          </span>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+@import "../../../styles.scss";
+
+.cards-mul {
+  margin-top: 20px;
+  box-shadow: 0 3px 6px -6px #3498db;
+  width: 54vh;
+}
+
+.car-details {
+  padding: 4px;
+  display: flex;
+}
+
+.card-n {
+  width: 30px;
+  text-align: center;
+}
+
+.card-number {
+  font-size: 16px;
+  color: $dodger-blue;
+}
+
+.card-d {
+  padding-left: 10px;
+}
+
+.chapter-heading {
+  padding-left: 10px;
+  font-size: 16px;
+  display: block;
+}
+
+.timing {
+  padding-left: 10px;
+}
+
+.m-r-8 {
+  margin-right: 8px;
+}

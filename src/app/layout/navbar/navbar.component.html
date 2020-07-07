@@ -5,243 +5,129 @@
     class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center"
   >
     <a class="navbar-brand brand-logo" href="index.html">
-      <img src="assets/images/logo.svg" alt="logo" />
+      <img src="../../../assets/images-ui/logo-2.jpg" alt="logo" />
+      <span>LearnCab</span>
     </a>
-    <a class="navbar-brand brand-logo-mini" href="index.html">
-      <img src="assets/images/logo-mini.svg" alt="logo" />
-    </a>
+    <button
+      class="navbar-toggler navbar-toggler-right d-lg-none align-self-center"
+      type="button"
+      (click)="toggleOffcanvas()"
+    >
+      <span
+        class="mdi mdi-menu color-1 d-none d-lg-inline-block d-xl-inline-block"
+      ></span>
+      <span class="mdi mdi-menu color-2 d-xl-none d-lg-none"></span>
+    </button>
+  </div>
+  <div
+    style="width: 150px !important;"
+    class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center d-xl-none d-lg-none"
+  >
+    <div
+      class="navbar-toggler navbar-toggler-right d-lg-none align-self-center"
+    >
+      <span class="color-2 d-xl-none d-lg-none"
+        ><img
+          src="../../../assets/images-ui/statistics.svg"
+          width="20px"
+          alt=""
+        />
+        <small style="margin-left: 8px;">CA Finals</small></span
+      >
+    </div>
   </div>
   <div class="navbar-menu-wrapper d-flex align-items-center">
     <ul class="navbar-nav navbar-nav-left header-links d-none d-md-flex">
       <li class="nav-item">
-        <a href="#" class="nav-link"
-          >Schedule
-          <span class="badge badge-primary ml-1">New</span>
-        </a>
-      </li>
-      <li class="nav-item active">
-        <a href="#" class="nav-link">
-          <i class="mdi mdi-elevation-rise"></i>Reports</a
-        >
-      </li>
-      <li class="nav-item">
-        <a href="#" class="nav-link">
-          <i class="mdi mdi-bookmark-plus-outline"></i>Score</a
-        >
+        <div class="has-search">
+          <img
+            class="fa fa-search form-control-feedback"
+            width="12px"
+            src="../../../assets/images-ui/magnifying-glass.svg"
+          />
+          <input
+            style="width: 20rem;"
+            type="search"
+            class="form-control"
+            placeholder="Search for Pappers, Chapters, Leactures"
+            aria-label="Username"
+            aria-describedby="colored-addon1"
+          />
+        </div>
       </li>
     </ul>
     <ul class="navbar-nav navbar-nav-right">
-      <li class="nav-item dropdown" ngbDropdown>
+      <li
+        class="nav-item dropdown d-none d-lg-inline-block d-xl-inline-block m-l m-0"
+      >
         <a
-          class="nav-link count-indicator dropdown-toggle"
+          class="nav-link count-indicator dropdown-toggle m-r-l-4"
           id="messageDropdown"
-          ngbDropdownToggle
         >
-          <i class="mdi mdi-file-document-box"></i>
-          <span class="count">7</span>
+          <i class="mdi mdi-wallet-membership color-1"></i
+          ><small class="color-1">Get Membership</small>
         </a>
-        <div
-          class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
-          ngbDropdownMenu
-          aria-labelledby="messageDropdown"
-        >
-          <div class="dropdown-item">
-            <p class="mb-0 font-weight-normal float-left">
-              You have 7 unread mails
-            </p>
-            <span class="badge badge-info badge-pill float-right"
-              >View all</span
-            >
-          </div>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item preview-item">
-            <div class="preview-thumbnail">
-              <img
-                src="assets/images/faces/face4.jpg"
-                alt="image"
-                class="profile-pic"
-              />
-            </div>
-            <div class="preview-item-content flex-grow">
-              <h6 class="preview-subject ellipsis font-weight-medium">
-                David Grey
-                <span class="float-right font-weight-light small-text"
-                  >1 Minutes ago</span
-                >
-              </h6>
-              <p class="font-weight-light small-text">
-                The meeting is cancelled
-              </p>
-            </div>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item preview-item">
-            <div class="preview-thumbnail">
-              <img
-                src="assets/images/faces/face2.jpg"
-                alt="image"
-                class="profile-pic"
-              />
-            </div>
-            <div class="preview-item-content flex-grow">
-              <h6 class="preview-subject ellipsis font-weight-medium">
-                Tim Cook
-                <span class="float-right font-weight-light small-text"
-                  >15 Minutes ago</span
-                >
-              </h6>
-              <p class="font-weight-light small-text">
-                New product launch
-              </p>
-            </div>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item preview-item">
-            <div class="preview-thumbnail">
-              <img
-                src="assets/images/faces/face3.jpg"
-                alt="image"
-                class="profile-pic"
-              />
-            </div>
-            <div class="preview-item-content flex-grow">
-              <h6 class="preview-subject ellipsis font-weight-medium">
-                Johnson
-                <span class="float-right font-weight-light small-text"
-                  >18 Minutes ago</span
-                >
-              </h6>
-              <p class="font-weight-light small-text">
-                Upcoming board meeting
-              </p>
-            </div>
-          </a>
-        </div>
       </li>
-      <li class="nav-item dropdown" ngbDropdown>
+      <li
+        class="nav-item dropdown d-none d-lg-inline-block d-xl-inline-block m-l m-r m-0"
+      >
+        <a
+          class="nav-link count-indicator dropdown-toggle m-r-l-4"
+          id="messageDropdown"
+        >
+          <i class="mdi mdi-cart-outline color-1"> </i
+          ><small class="color-1">Upgrade</small>
+        </a>
+      </li>
+      <li class="nav-item dropdown d-none d-lg-inline-block d-xl-inline-block">
         <a
           class="nav-link count-indicator dropdown-toggle"
           id="notificationDropdown"
-          ngbDropdownToggle
         >
-          <i class="mdi mdi mdi-bell"></i>
+          <i class="mdi mdi mdi-bell color-1"></i>
           <span class="count">4</span>
         </a>
-        <div
-          class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
-          ngbDropdownMenu
-          aria-labelledby="notificationDropdown"
-        >
-          <a class="dropdown-item">
-            <p class="mb-0 font-weight-normal float-left">
-              You have 4 new notifications
-            </p>
-            <span class="badge badge-pill badge-warning float-right"
-              >View all</span
-            >
-          </a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item preview-item">
-            <div class="preview-thumbnail">
-              <div class="preview-icon bg-success">
-                <i class="mdi mdi-alert-circle-outline mx-0"></i>
-              </div>
-            </div>
-            <div class="preview-item-content">
-              <h6 class="preview-subject font-weight-medium">
-                Application Error
-              </h6>
-              <p class="font-weight-light small-text">
-                Just now
-              </p>
-            </div>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item preview-item">
-            <div class="preview-thumbnail">
-              <div class="preview-icon bg-warning">
-                <i class="mdi mdi-tune-vertical mx-0"></i>
-              </div>
-            </div>
-            <div class="preview-item-content">
-              <h6 class="preview-subject font-weight-medium">Settings</h6>
-              <p class="font-weight-light small-text">
-                Private message
-              </p>
-            </div>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item preview-item">
-            <div class="preview-thumbnail">
-              <div class="preview-icon bg-info">
-                <i class="mdi mdi-email-outline mx-0"></i>
-              </div>
-            </div>
-            <div class="preview-item-content">
-              <h6 class="preview-subject font-weight-medium">
-                New user registration
-              </h6>
-              <p class="font-weight-light small-text">
-                2 days ago
-              </p>
-            </div>
-          </a>
-        </div>
       </li>
-      <li class="nav-item dropdown d-none d-xl-inline-block" ngbDropdown>
-        <a class="nav-link dropdown-toggle" id="UserDropdown" ngbDropdownToggle>
-          <span class="profile-text">Hello, Richard V.Welsh !</span>
+      <li class="nav-item dropdown d-none d-lg-inline-block d-xl-inline-block">
+        <a class="nav-link dropdown-toggle" id="UserDropdown">
           <img
             class="img-xs rounded-circle"
             src="assets/images/faces/face1.jpg"
             alt="Profile image"
           />
         </a>
-        <div
-          class="dropdown-menu dropdown-menu-right navbar-dropdown"
-          ngbDropdownMenu
-          aria-labelledby="UserDropdown"
-        >
-          <a class="dropdown-item p-0">
-            <div class="d-flex border-bottom">
-              <div
-                class="py-3 px-4 d-flex align-items-center justify-content-center"
-              >
-                <i class="mdi mdi-bookmark-plus-outline mr-0 text-gray"></i>
-              </div>
-              <div
-                class="py-3 px-4 d-flex align-items-center justify-content-center border-left border-right"
-              >
-                <i class="mdi mdi-account-outline mr-0 text-gray"></i>
-              </div>
-              <div
-                class="py-3 px-4 d-flex align-items-center justify-content-center"
-              >
-                <i class="mdi mdi-alarm-check mr-0 text-gray"></i>
-              </div>
-            </div>
-          </a>
-          <a class="dropdown-item mt-2">
-            Manage Accounts
-          </a>
-          <a class="dropdown-item">
-            Change Password
-          </a>
-          <a class="dropdown-item">
-            Check Inbox
-          </a>
-          <a class="dropdown-item">
-            Sign Out
-          </a>
-        </div>
       </li>
     </ul>
-    <button
-      class="navbar-toggler navbar-toggler-right d-lg-none align-self-center"
-      type="button"
-      (click)="toggleOffcanvas()"
+    <div
+      class="profile-mobile navbar-toggler navbar-toggler-right d-xl-none d-lg-none align-self-center"
     >
-      <span class="mdi mdi-menu"></span>
-    </button>
+      <img
+        class="img-ss rounded-circle"
+        src="assets/images/faces/face1.jpg"
+        alt="Profile image"
+        (click)="toggleOffcanvas()"
+      />
+    </div>
+  </div>
+  <br />
+  <div
+    class="navbar-brand-wrapper d-flex justify-content-center d-md-none d-xl-none d-lg-none"
+    style="margin: 0 auto !important; width: auto !important;"
+  >
+    <div class="has-search">
+      <img
+        class="fa fa-search form-control-feedback"
+        width="12px"
+        src="../../../assets/images-ui/magnifying-glass.svg"
+      />
+      <input
+        style="width: 17rem;"
+        type="search"
+        class="form-control"
+        placeholder="Search for Pappers, Chapters, Leactures"
+        aria-label="Username"
+        aria-describedby="colored-addon1"
+      />
+    </div>
   </div>
 </nav>

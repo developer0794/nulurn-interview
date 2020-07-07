@@ -3,7 +3,7 @@
 @import "../../../styles";
 .sidebar {
   min-height: calc(100vh - #{$navbar-height});
-  background: $sidebar-light-bg;
+  background: $navbar-light-color;
   font-family: $type-2;
   padding: 0;
   width: $sidebar-width-lg;
@@ -90,106 +90,89 @@
           color: darken($sidebar-light-menu-color, 5%);
         }
         &.active {
-          color: $sidebar-light-menu-active-color;
+          color: $body-color;
           .menu-title,
           i {
             color: inherit;
           }
         }
       }
-      &.nav-profile {
-        .nav-link {
-          @include display-flex;
-          @include flex-direction(column);
-          height: auto;
-          .user-wrapper {
-            @include display-flex;
-            margin-bottom: 30px;
-            .profile-image {
-              width: 40px;
-              height: 40px;
-              img {
-                @include border-radius(100%);
-                max-width: 100%;
-              }
-            }
-            .text-wrapper {
-              margin-left: 15px;
-              .rtl & {
-                margin-left: 0;
-                margin-right: 15px;
-              }
-              .profile-name {
-                font-weight: 500;
-                margin-bottom: 8px;
-              }
-              .designation {
-                margin-right: 3px;
-              }
-            }
-          }
+    }
+    .home-dark {
+      background-color: $navbar-light-color !important;
+    }
+    .nav-item {
+      background-color: $navbar-light-color;
+      .nav-link {
+        .home {
+          color: $white;
         }
       }
-    }
-    &:not(.sub-menu) {
-      > .nav-item {
-        &:hover {
-          &:not(.nav-profile) {
-            > .nav-link {
-              background: $sidebar-light-menu-hover-bg;
-              color: $sidebar-light-menu-hover-color;
-            }
+      .nav-link {
+        color: $white;
+        padding: $sidebar-submenu-item-padding;
+        font-size: $sidebar-submenu-font-size;
+        line-height: 1;
+        height: auto;
+        .text-wrapper {
+          .main-heading {
+            margin-bottom: 0px !important;
+            margin-top: 6px;
           }
+        }
+        &.active {
+          color: $black;
+          background-color: $white;
         }
       }
-    }
-    &.sub-menu {
-      margin-bottom: 0;
-      padding: $sidebar-submenu-padding;
-      .nav-item {
-        .nav-link {
-          color: $sidebar-light-submenu-color;
-          padding: $sidebar-submenu-item-padding;
-          font-size: $sidebar-submenu-font-size;
-          line-height: 1;
-          height: auto;
-          &.active {
-            color: $sidebar-light-menu-active-color;
-            background: transparent;
-            &:before {
-              background: $sidebar-light-menu-active-color;
-            }
-          }
-        }
-        &:hover {
-          > .nav-link {
-            background: $sidebar-light-submenu-hover-bg;
-            color: $sidebar-light-submenu-hover-color;
-            &:before {
-              background: $sidebar-light-submenu-hover-color;
-            }
-          }
+      &:hover {
+        > .nav-link {
+          color: $black;
+          background-color: $breadcrumb-item-bg;
         }
       }
     }
   }
 }
 
+p {
+  font-size: 12px !important;
+}
+
 /* style for off-canvas menu*/
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 767px) {
+  .sidebar-offcanvas {
+    position: fixed;
+    max-height: calc(100vh - #{$navbar-height});
+    top: 126px; // $navbar-height;
+    bottom: 0;
+    overflow: auto;
+    left: -$sidebar-width-lg;
+    -webkit-transition: all 0.25s ease-out;
+    -o-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+    &.active {
+      left: 0;
+    }
+  }
+}
+
+/* style for off-canvas menu*/
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .sidebar-offcanvas {
     position: fixed;
     max-height: calc(100vh - #{$navbar-height});
     top: $navbar-height;
     bottom: 0;
     overflow: auto;
-    right: -$sidebar-width-lg;
+    left: -$sidebar-width-lg;
     -webkit-transition: all 0.25s ease-out;
     -o-transition: all 0.25s ease-out;
     transition: all 0.25s ease-out;
     &.active {
-      right: 0;
+      left: 0;
     }
   }
 }
