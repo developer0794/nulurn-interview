@@ -3,9 +3,74 @@
 @import "../../../styles";
 /* Navbar */
 
+@media only screen and (min-width: 769px) {
+  .navbar {
+    background: $white;
+    .navbar-brand-wrapper {
+      background-color: $sidebar-dark-menu-icon-color;
+    }
+  }
+}
+
+@media only screen and (min-width: 320px) and(max-width:768px) {
+  .navbar {
+    background: $navbar-light-color;
+  }
+}
+
+.color-1 {
+  color: $black;
+}
+
+.color-2 {
+  color: $white;
+}
+
+.m-l {
+  border-left: 1px solid $text-muted;
+}
+
+.m-r {
+  border-right: 1px solid $text-muted;
+}
+
+.m-t-4 {
+  margin-top: 4px;
+}
+
+.m-r-l-4 {
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.m-0 {
+  margin: 0 !important;
+}
+
+.has-search .form-control {
+  padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 20px;
+  margin: 10px;
+  height: 12px;
+  padding: 0px;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
+}
+
+#UserDropdown {
+  color: $text-muted;
+}
+
 .navbar {
   font-family: $type-2;
-  background: $blue-teal-gradient;
   transition: background $action-transition-duration
     $action-transition-timing-function;
   -webkit-transition: background $action-transition-duration
@@ -27,7 +92,6 @@
     -ms-transition: width $action-transition-duration
         $action-transition-timing-function,
       background $action-transition-duration $action-transition-timing-function;
-    background: $sidebar-light-bg;
     width: $sidebar-width-lg;
     height: $navbar-height;
     .navbar-brand {
@@ -43,11 +107,17 @@
         color: lighten(color(gray-dark), 10%);
       }
       img {
-        width: calc(#{$sidebar-width-lg} - 130px);
+        width: 40px;
         max-width: 100%;
         height: 28px;
         margin: auto;
         vertical-align: middle;
+      }
+
+      span {
+        color: $white;
+        font-size: 14px !important;
+        margin-top: 0.01rem;
       }
     }
     .brand-logo-mini {
@@ -80,6 +150,7 @@
     .navbar-toggler {
       border: 0;
       color: inherit;
+
       &:not(.navbar-toggler-right) {
         @media (max-width: 991px) {
           display: none;
