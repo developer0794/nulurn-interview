@@ -67,14 +67,18 @@
                         class="body-color font-weight-medium"
                         style="margin-bottom: 0;"
                       >
-                        <span class="weather-date">CHAPTESR</span>
+                        <span
+                          class="weather-date bold"
+                          style="font-weight: bold;"
+                          >CHAPTERS</span
+                        >
                       </p>
                     </div>
                     <div class="row">
                       <ng-container
                         *ngFor="let lecture of item.lectures; let i = index"
                       >
-                        <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="col-lg-6 col-md-6">
                           <app-card-chapters
                             [indexValue]="i"
                             [lectureData]="lecture"

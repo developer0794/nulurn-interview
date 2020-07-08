@@ -1,6 +1,6 @@
 export const lectureData = [
   {
-    name: "series1",
+    name: "Series 1",
     images: [
       { img: "assets/images/faces/face1.jpg", name: "Faculty name" },
       { img: "assets/images/faces/face1.jpg", name: "Faculty name" },
@@ -45,7 +45,7 @@ export const lectureData = [
     ],
   },
   {
-    name: "series2",
+    name: "Series 2",
     images: [
       { img: "assets/images/faces/face1.jpg", name: "Faculty name" },
       { img: "assets/images/faces/face1.jpg", name: "Faculty name" },

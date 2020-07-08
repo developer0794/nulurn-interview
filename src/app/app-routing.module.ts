@@ -1,5 +1,5 @@
 import { NgModule } from "@angular/core";
-import { Routes, RouterModule } from "@angular/router";
+import { Routes, RouterModule, ExtraOptions } from "@angular/router";
 
 // layout
 
@@ -20,8 +20,14 @@ const routes: Routes = [
   { path: "**", redirectTo: "dashboard" },
 ];
 
+const routerOptions: ExtraOptions = {
+  useHash: true,
+  anchorScrolling: "enabled",
+  scrollPositionRestoration: "enabled",
+};
+
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, routerOptions)],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

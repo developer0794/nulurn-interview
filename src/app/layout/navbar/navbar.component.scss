@@ -144,6 +144,7 @@
     padding-right: 15px;
     width: calc(100% - #{$sidebar-width-lg});
     height: $navbar-height;
+    border-bottom: 1px solid #c7c4c485;
     @media (max-width: 991px) {
       width: auto;
     }
