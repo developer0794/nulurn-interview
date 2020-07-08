@@ -1,5 +1,4 @@
 import { Component, OnInit } from "@angular/core";
-import { lectureData } from "../../../assets/mockUpdata/lectureDetails";
 
 @Component({
   selector: "app-dashboard-one",
@@ -8,7 +7,82 @@ import { lectureData } from "../../../assets/mockUpdata/lectureDetails";
 })
 export class DashboardOneComponent implements OnInit {
   setValue = null;
-  seriesListArray: any = lectureData;
+  seriesListArray: any = [
+    {
+      name: "Series 1",
+      images: [
+        { img: "assets/images/faces/face1.jpg", name: "Faculty name" },
+        { img: "assets/images/faces/face1.jpg", name: "Faculty name" },
+      ],
+      lectures: [
+        {
+          heading: "Ind AS on Liabilities of the Financial Statment",
+          lecturesNumber: 10,
+        },
+        {
+          heading: "Ind AS on Liabilities of the Financial Statment",
+          lecturesNumber: 10,
+        },
+        {
+          heading: "Ind AS on Liabilities of the Financial Statment",
+          lecturesNumber: 10,
+        },
+        {
+          heading: "Ind AS on Liabilities of the Financial Statment",
+          lecturesNumber: 10,
+        },
+        {
+          heading: "Ind AS on Liabilities of the Financial Statment",
+          lecturesNumber: 10,
+        },
+        {
+          heading: "Ind AS on Liabilities of the Financial Statment",
+          lecturesNumber: 10,
+        },
+        {
+          heading: "Ind AS on Liabilities of the Financial Statment",
+          lecturesNumber: 10,
+        },
+        {
+          heading: "Ind AS on Liabilities of the Financial Statment",
+          lecturesNumber: 10,
+        },
+        {
+          heading: "Ind AS on Liabilities of the Financial Statment",
+          lecturesNumber: 10,
+        },
+      ],
+    },
+    {
+      name: "Series 2",
+      images: [
+        { img: "assets/images/faces/face1.jpg", name: "Faculty name" },
+        { img: "assets/images/faces/face1.jpg", name: "Faculty name" },
+      ],
+      lectures: [
+        {
+          heading: "Ind changed values Liabilities of the Financial Statment",
+          lecturesNumber: 12,
+        },
+        {
+          heading: "Ind changed values Liabilities of the Financial Statment",
+          lecturesNumber: 12,
+        },
+        {
+          heading: "Ind changed values Liabilities of the Financial Statment",
+          lecturesNumber: 12,
+        },
+        {
+          heading: "Ind changed values Liabilities of the Financial Statment",
+          lecturesNumber: 12,
+        },
+        {
+          heading: "Ind changed values Liabilities of the Financial Statment",
+          lecturesNumber: 12,
+        },
+      ],
+    },
+  ];
 
   constructor() {}
 
