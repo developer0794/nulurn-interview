@@ -3,7 +3,12 @@
 .cards-mul {
   margin-top: 20px;
   box-shadow: 0 3px 6px -6px #3498db;
-  width: 54vh;
+}
+
+@media only screen and (min-width: 768px) {
+  .cards-mul {
+    width: 54vh;
+  }
 }
 
 .car-details {
@@ -37,4 +42,14 @@
 
 .m-r-8 {
   margin-right: 8px;
+}
+
+.card-active-a:active {
+  background-color: $content-bg;
+}
+
+.card-active:hover {
+  background-color: $content-bg;
+  transform: scale(1.1);
+  transition: transform 0.2s;
 }

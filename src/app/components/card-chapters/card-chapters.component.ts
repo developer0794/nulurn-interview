@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from "@angular/core";
 export class CardChaptersComponent implements OnInit {
   @Input("lectureData") lectureData;
   @Input("indexValue") indexValue;
+  @Input("cssInput") cssInput;
   indexInc: string;
 
   constructor() {}
@@ -16,7 +17,8 @@ export class CardChaptersComponent implements OnInit {
     if (this.indexValue + 1 >= 10) {
       this.indexInc = this.indexValue;
     } else {
-      this.indexInc = "0" + this.indexValue;
+      var value = this.indexValue + 1;
+      this.indexInc = "0" + value;
     }
   }
 }

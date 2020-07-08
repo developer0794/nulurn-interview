@@ -12,6 +12,7 @@ import { PapretwoComponent } from "./papretwo/papretwo.component";
 import { PapreThreeComponent } from "./papre-three/papre-three.component";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { ComponentsModule } from "../components/components.module";
+import { TabScrollModule } from "ngx-tab-scroll";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,21 @@ import { ComponentsModule } from "../components/components.module";
     PapretwoComponent,
     PapreThreeComponent,
   ],
-  imports: [CommonModule, DashboardRoutingModule, NgbModule, ComponentsModule],
+  imports: [
+    CommonModule,
+    DashboardRoutingModule,
+    NgbModule,
+    ComponentsModule,
+    TabScrollModule.forRoot({
+      autoRecalculate: true,
+      showDropDown: true,
+      showTooltips: false,
+      tooltipLeftPlacement: "top",
+      tooltipRightPlacement: "top",
+      scrollBy: 50,
+      leftScrollAddition: 0,
+    }),
+  ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
 })
 export class DashboardModule {}

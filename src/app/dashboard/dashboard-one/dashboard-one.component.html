@@ -1,5 +1,5 @@
 <div id="f-report">
-  <nav class="nav-main-c" aria-label="breadcrumb" role="navigation" style="">
+  <nav class="nav-main-c" aria-label="breadcrumb" role="navigation">
     <ol class="breadcrumb" style="border: none;">
       <li class="breadcrumb-item">
         <a href="#"><i class="mdi mdi-home"></i></a>
@@ -74,7 +74,7 @@
                       <ng-container
                         *ngFor="let lecture of item.lectures; let i = index"
                       >
-                        <div class="col-lg-6 col-md-6">
+                        <div class="col-xl-4 col-lg-6 col-md-6">
                           <app-card-chapters
                             [indexValue]="i"
                             [lectureData]="lecture"
@@ -96,5 +96,58 @@
     <p class="body-color font-weight-medium" style="margin-bottom: 0;">
       <span class="weather-date">PAPERS</span>
     </p>
+
+    <div class="drop-down" style="padding-top: 10px;">
+      <div class="form-group">
+        <select
+          class="form-control form-control-lg"
+          id="exampleFormControlSelect1"
+        >
+          <option selected rows="2"
+            >Ind AS on Liabilities of the Financial Statment</option
+          >
+          <option>Ind AS on Liabilities of the Financial Statment</option>
+          <option>Ind AS on Liabilities of the Financial Statment</option>
+          <option>Ind AS on Liabilities of the Financial Statment</option>
+          <option>Ind AS on Liabilities of the Financial Statment</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="tabs-start">
+      <div class="cards-mobile">
+        <div class="card-body" style="padding: 0;">
+          <ngb-tabset type="pills">
+            <ng-container *ngFor="let item of seriesListArray">
+              <ngb-tab [title]="item.name">
+                <ng-template ngbTabContent style="border: none !important;">
+                  <div class="main-details">
+                    <div class="label">
+                      <p
+                        class="body-color font-weight-medium"
+                        style="margin-bottom: 0;"
+                      >
+                        <span class="weather-date">CHAPTESR</span>
+                      </p>
+                    </div>
+                    <div class="row">
+                      <ng-container
+                        *ngFor="let lecture of item.lectures; let i = index"
+                      >
+                        <div class="col-lg-6 col-md-6">
+                          <app-card-chapters
+                            [indexValue]="i"
+                            [lectureData]="lecture"
+                          ></app-card-chapters></div
+                      ></ng-container>
+                    </div>
+                  </div>
+                </ng-template>
+              </ngb-tab>
+            </ng-container> </ngb-tabset
+          ><
+        </div>
+      </div>
+    </div>
   </div>
 </div>

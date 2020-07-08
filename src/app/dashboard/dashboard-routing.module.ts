@@ -9,7 +9,8 @@ import { PapreThreeComponent } from "./papre-three/papre-three.component";
 const routes: Routes = [
   {
     path: "",
-    component: DashboardOneComponent,
+    redirectTo: "dashboard",
+    pathMatch: "full",
   },
   {
     path: "dashboard",
@@ -31,6 +32,7 @@ const routes: Routes = [
     path: "paper4",
     component: DashboardOneComponent,
   },
+  { path: "**", redirectTo: "dashboard" },
 ];
 
 @NgModule({

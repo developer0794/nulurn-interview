@@ -6,6 +6,7 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./papre-one.component.scss"],
 })
 export class PapreOneComponent implements OnInit {
+  tabs = [1, 2.3];
   constructor() {}
 
   ngOnInit() {}
