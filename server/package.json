@@ -2,10 +2,9 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "deploy": "gcloud app deploy",
-    "start": "ng serve --proxy-config proxy.config.json",
+    "start": "node bin/www",
     "system-test": "repo-tools test app",
     "test": "npm run system-test",
     "e2e-test": "repo-tools test deploy"
@@ -16,6 +15,16 @@
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
     "ejs": "^3.1.3",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "express": "^4.16.4"
+  },
+  "cloud-repo-tools": {
+    "test": {
+      "app": {
+        "msg": "Lamico Auto Protal"
+      }
+    },
+    "requiresKeyFile": true,
+    "requiresProjectId": true
   }
 }
