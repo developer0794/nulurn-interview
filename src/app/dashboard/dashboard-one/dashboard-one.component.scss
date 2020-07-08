@@ -48,3 +48,9 @@
     margin-right: 24px;
   }
 }
+
+@media only screen and (max-width: 320) {
+  ::ng-deep ngb-tabset > ul {
+    width: 320px !important;
+  }
+}

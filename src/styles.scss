@@ -49,4 +49,9 @@
 @import "./assets/styles/misc";
 @import "./assets/styles/utilities";
 @import "./assets/styles/demo";
+@import "~ngx-tab-scroll/tab-scroll-theme-bootstrap";
 /* You can add global styles to this file, and also import other style files */
+
+html * {
+  font-family: "Nunito Sans", sans-serif !important;
+}

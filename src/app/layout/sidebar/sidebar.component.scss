@@ -99,7 +99,7 @@
       }
     }
     .home-dark {
-      background-color: $navbar-light-color !important;
+      background-color: #172e4a !important;
     }
     .nav-item {
       background-color: $navbar-light-color;
@@ -175,4 +175,17 @@ p {
       left: 0;
     }
   }
+}
+
+.button-bottom {
+  position: fixed;
+  bottom: 10px;
+}
+
+.btn-c {
+  margin: 10px;
+  padding: 4px;
+  width: 100px;
+  background-color: #888a99;
+  border: none;
 }
